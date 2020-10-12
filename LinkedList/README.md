@@ -19,11 +19,15 @@ struct node {
     struct node *next;
 }
 ```
+![linkedlist img](linked-list.png)
+
 ## Circular Singly Linkedlist
 
 A circular linked list is a variation of a normal linked list. In a circular linked list, as the name suggests, the list does not end; instead, it loops around. The last element of a circular linked list points to the head instead of pointing to null. A circular linked list can be implemented as a singly linked list or a doubly linked list.
 
 In this repository, I have added the code for circular linked list which is implemented using _singly linked list_.
+
+![circularlinkedlist img](circular.jpg)
 
 ## Doubly Linkedlist
 
