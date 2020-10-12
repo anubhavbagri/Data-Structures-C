@@ -24,3 +24,9 @@ struct node {
 A circular linked list is a variation of a normal linked list. In a circular linked list, as the name suggests, the list does not end; instead, it loops around. The last element of a circular linked list points to the head instead of pointing to null. A circular linked list can be implemented as a singly linked list or a doubly linked list.
 
 In this repository, I have added the code for circular linked list which is implemented using _singly linked list_.
+
+## Doubly Linkedlist
+
+Doubly linked list is a complex type of linked list in which a node contains a pointer to the previous as well as the next node in the sequence. Therefore, in a doubly linked list, a node consists of three parts: node data, pointer to the next node in sequence (next pointer) , pointer to the previous node (previous pointer). A sample node in a doubly linked list is shown in the figure.
+
+![doublylinkedlist img](doubly-linked-list.png)
