@@ -18,4 +18,4 @@ Output:
 
 7 -> 11 -> NULL
 
-* ![_Solution_](split.c)
+* Solution :  **split.c**
