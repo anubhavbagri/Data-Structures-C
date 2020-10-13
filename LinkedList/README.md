@@ -27,7 +27,7 @@ A circular linked list is a variation of a normal linked list. In a circular lin
 
 In this repository, I have added the code for circular linked list which is implemented using _singly linked list_.
 
-![circularlinkedlist img](circular.jpg)
+![circularlinkedlist img](circular.png)
 
 ## Doubly Linkedlist
 
