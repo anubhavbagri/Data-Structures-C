@@ -65,6 +65,22 @@ void alternateSplit(node *start, node **aRef, node **bRef)
     *bRef = b.next;
 }
 
+void display(node *start)
+{
+    if(start==NULL)
+    {
+        printf("List is Empty.");
+        return;
+    }
+    printf("\nList : [");
+    while(start)
+    {
+        printf("%d ", start->data);
+        start=start->next;
+    }
+    printf("]\n");
+}
+
 int main()
 {
     node *start = NULL, *a = NULL, *b = NULL;
