@@ -19,3 +19,19 @@ Output:
 7 -> 11 -> NULL
 
 * Solution :  **split.c**
+
+Q1.(ii) Given a list, divide its nodes to make two smaller lists. The sublists should be
+made from alternating elements in the original list. The elements in the new lists
+may be in any order (for some implementations, it turns out to be convenient if they are in the reverse order from the original list.)
+
+input :
+
+a -> b -> a -> b -> a -> NULL
+
+output :
+
+a -> a -> a -> NULL
+
+b -> b -> NULL
+
+* Solution :  **AlternativeSplit.c**
