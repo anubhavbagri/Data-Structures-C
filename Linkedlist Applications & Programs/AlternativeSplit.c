@@ -8,6 +8,16 @@ struct Node
 };
 typedef struct Node node;
 
+void MoveNode(node **endRef, node **startRef)
+{
+    node *newNode = *startRef;
+    if(newNode == NULL)
+        return;
+    *startRef = newNode->next;
+    newNode->next = *endRef;
+    *endRef = newNode;
+}
+
 void insertAtEnd(node **start, int d)
 {
     /* 1. allocate new node. */
