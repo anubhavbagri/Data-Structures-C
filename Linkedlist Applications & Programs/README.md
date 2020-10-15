@@ -2,7 +2,7 @@
 
 > Manipal university Jaipur Data Structures and Algorithms ASSIGNMENT- 2 :  October 2020
 
-Q1(i) Given a list, split it into two sublists — one for the front half, and one for the
+**Q1(i)** Given a list, split it into two sublists — one for the front half, and one for the
 back half. If the number of elements is odd, the extra element should go in the
 front list. Getting this right for all the cases is harder than it looks. You should
 check your solution against a few cases (length = 2, length = 3, length=4) to make
@@ -20,7 +20,7 @@ Output:
 
 _Solution_ :  **split.c**
 
-Q1.(ii) Given a list, divide its nodes to make two smaller lists. The sublists should be
+**Q1.(ii)** Given a list, divide its nodes to make two smaller lists. The sublists should be
 made from alternating elements in the original list. The elements in the new lists
 may be in any order (for some implementations, it turns out to be convenient if they are in the reverse order from the original list.)
 
