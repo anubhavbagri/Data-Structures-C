@@ -64,3 +64,36 @@ void alternateSplit(node *start, node **aRef, node **bRef)
     *aRef = a.next;
     *bRef = b.next;
 }
+
+int main()
+{
+    node *start = NULL, *a = NULL, *b = NULL;
+    printf("\nPress 1 to insert Node (at the End).");
+    printf("\nPress 2 to divide list into alternate elements and display.");
+    printf("\nPress 0 to exit.\n");
+    while (1)
+    {
+        int ch, d, pos, x;
+        printf("\nEnter your choice : ");
+        scanf("%d", &ch);
+        switch (ch)
+        {
+        case 0:
+            exit(ch); //return
+        case 1:
+            printf("\nEnter data to be inserted : ");
+            scanf("%d", &d);
+            insertAtEnd(&start, d);
+            break;
+        case 2:
+            split(&start, &a, &b);
+            printf("\nFront Half - \n");
+            display(a);
+            printf("\nBack Half - \n");
+            display(b);
+            break;
+        default:
+            printf("Invalid Choice.");
+        }
+    }
+}
