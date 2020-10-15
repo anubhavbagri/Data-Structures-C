@@ -86,10 +86,10 @@ int main()
             insertAtEnd(&start, d);
             break;
         case 2:
-            split(&start, &a, &b);
-            printf("\nFront Half - \n");
+            alternateSplit(start,&a,&b);
+            printf("\nFirst List - \n");
             display(a);
-            printf("\nBack Half - \n");
+            printf("\nSecond List - \n");
             display(b);
             break;
         default:
