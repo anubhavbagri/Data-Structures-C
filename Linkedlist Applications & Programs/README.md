@@ -18,7 +18,7 @@ Output:
 
 7 -> 11 -> NULL
 
-* Solution :  **split.c**
+_Solution_ :  **split.c**
 
 Q1.(ii) Given a list, divide its nodes to make two smaller lists. The sublists should be
 made from alternating elements in the original list. The elements in the new lists
@@ -34,4 +34,4 @@ a -> a -> a -> NULL
 
 b -> b -> NULL
 
-* Solution :  **AlternativeSplit.c**
+_Solution_ :  **AlternativeSplit.c**
