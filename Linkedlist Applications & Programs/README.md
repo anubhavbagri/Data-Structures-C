@@ -18,7 +18,7 @@ _Output:_
 
 7 -> 11 -> NULL
 
-_Solution_ :  **split.c**
+_Solution_ :  [split.c](split.c)
 
 **Q1.(ii)** Given a list, divide its nodes to make two smaller lists. The sublists should be
 made from alternating elements in the original list. The elements in the new lists
@@ -96,3 +96,20 @@ _Output :_
 
 _Solution_ :  **printMultiple.c**
 
+**Q4.(ii)** For a given singly linked list delete a node:
+* at the beginning
+* at the end
+* at a given position k
+
+_Input :_
+k=3
+
+1 -> 2 -> 5 -> 7 -> 4 -> NULL
+
+_Output :_
+
+* 2 -> 5 -> 7 -> 4 -> NULL
+* 1 -> 2 -> 5 -> 7 -> NULL
+* 1 -> 2 -> 7 -> 4 -> NULL
+
+_Solution_ :  **MenuDrivenOperation.c**
