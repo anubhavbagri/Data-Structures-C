@@ -50,7 +50,7 @@ _Output :_
 * 1 -> 2 -> 5 -> 7 -> 4 -> 8 -> NULL
 * 1 -> 2 -> 5 -> 8 -> 7 -> 4 -> NULL
 
-_Solution_ :  **insertPos.c**
+_Solution_ :  **MenuDrivenOperation.c**
 
 **Q2.(ii)** For a given singly linked list delete a node:
 * at the beginning
@@ -68,4 +68,31 @@ _Output :_
 * 1 -> 2 -> 5 -> 7 -> NULL
 * 1 -> 2 -> 7 -> 4 -> NULL
 
-_Solution_ :  **deletePos.c**
+_Solution_ :  **MenuDrivenOperation.c**
+
+**Q3.(i)** Print all the elements at the index of multiples of k with the first element assumed to have an index of 0. Do this for a single pass of the linked list.
+
+_Input :_
+k=3
+
+12 -> 15 -> 18 -> 17 -> 19 -> 20 -> 22 -> NULL
+
+_Output :_
+
+12 -> 17 -> 22 -> NULL
+
+_Solution_ :  **printMultiple.c**
+
+**Q3.(ii)** Extend the above solution assuming that the list is circular and the N-th index is the same as 0-th index. You may need multiple passes. However, every number should be printed only once during its first selection.
+
+_Input :_
+k=3
+
+12 -> 15 -> 18 -> 17 -> 19 -> 20 -> 22 -> NULL
+
+_Output :_
+
+12 -> 17 -> 22 -> 18 -> 20 -> 15 -> 19 -> NULL
+
+_Solution_ :  **printMultiple.c**
+
