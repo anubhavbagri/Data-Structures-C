@@ -1,4 +1,4 @@
-# LinkedList Applications and its programs
+# LinkedList Applications and Its Programs :computer:
 
 > Manipal university Jaipur Data Structures and Algorithms ASSIGNMENT- 2 :  October 2020
 
