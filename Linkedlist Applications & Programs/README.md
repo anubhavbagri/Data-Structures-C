@@ -122,3 +122,7 @@ _Output :_
 18 -> 20 -> 10 -> 15 -> 6 -> 8 -> 3 -> 5 -> 7 -> NULL
 
 _Solution_ :  [pairWiseSwap.c]()
+
+**Q5.** Given a singly linked list L0 -> L1 -> … -> Ln-1 -> Ln. Write an algorithm to rearrange the nodes in the list so that the new formed list is: L0 -> Ln -> L1 -> Ln-1 -> L2 -> Ln-2 …
+
+_Solution_ :  [Rearrange Algorithm](https://gist.github.com/anubhavbagri/b450b4c3ba12927dd56e3133c31c2aa7/f690d90f6f8d4177e05f6dac7c300c5d3176a89b)
