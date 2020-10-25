@@ -73,43 +73,37 @@ Output : 12 -> 17 -> 22 -> NULL
 Solution :  [printMultiple.c]()
 
 **Q3.(ii)** Extend the above solution assuming that the list is circular and the N-th index is the same as 0-th index. You may need multiple passes. However, every number should be printed only once during its first selection.
-
-Input :
-k=3
-
-12 -> 15 -> 18 -> 17 -> 19 -> 20 -> 22 -> NULL
-
-Output :
-
-12 -> 17 -> 22 -> 18 -> 20 -> 15 -> 19 -> NULL
-
+```
+Input : k=3
+        12 -> 15 -> 18 -> 17 -> 19 -> 20 -> 22 -> NULL
+```
+```
+Output : 12 -> 17 -> 22 -> 18 -> 20 -> 15 -> 19 -> NULL
+```
 Solution :  [circularMultiple.c]()
 
 **Q4.(i)** Remove in a linked list all the nodes that have a greater value to their right.
-
+```
 Input :
-* 10 -> 12 -> 15 -> 20 -> 5 -> 16 -> 25 -> 8 -> NULL
-* 10 -> 12 -> 15 -> 20 -> 25 -> 26 -> 30 -> 40 -> NULL
-* 20 -> 18 -> 15 -> 10 -> 8 -> 6 -> 5 -> 3 -> NULL
-
-
+10 -> 12 -> 15 -> 20 -> 5 -> 16 -> 25 -> 8 -> NULL
+10 -> 12 -> 15 -> 20 -> 25 -> 26 -> 30 -> 40 -> NULL
+20 -> 18 -> 15 -> 10 -> 8 -> 6 -> 5 -> 3 -> NULL
+```
+```
 Output :
-
-* 20 -> 25 -> 8 -> NULL
-* 40 -> NULL
-* 20 -> 18 -> 15 -> 10 -> 8 -> 6 -> 5 -> 3 -> NULL
-
+20 -> 25 -> 8 -> NULL
+40 -> NULL
+20 -> 18 -> 15 -> 10 -> 8 -> 6 -> 5 -> 3 -> NULL
+```
 Solution :  [removeGreater.c]()
 
 **Q4.(ii)** Perform pair-wise swapping of nodes of a given linked list.
-
-Input :
-20 -> 18 -> 15 -> 10 -> 8 -> 6 -> 5 -> 3 -> 7 -> NULL
-
-
-Output :
-18 -> 20 -> 10 -> 15 -> 6 -> 8 -> 3 -> 5 -> 7 -> NULL
-
+```
+Input : 20 -> 18 -> 15 -> 10 -> 8 -> 6 -> 5 -> 3 -> 7 -> NULL
+```
+```
+Output : 18 -> 20 -> 10 -> 15 -> 6 -> 8 -> 3 -> 5 -> 7 -> NULL
+```
 Solution :  [pairWiseSwap.c]()
 
 **Q5.** Given a singly linked list L0 -> L1 -> … -> Ln-1 -> Ln. Write an algorithm to rearrange the nodes in the list so that the new formed list is: L0 -> Ln -> L1 -> Ln-1 -> L2 -> Ln-2 …
