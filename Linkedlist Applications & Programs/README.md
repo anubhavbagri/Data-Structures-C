@@ -108,4 +108,15 @@ Solution :  [pairWiseSwap.c]()
 
 **Q5.** Given a singly linked list L0 -> L1 -> … -> Ln-1 -> Ln. Write an algorithm to rearrange the nodes in the list so that the new formed list is: L0 -> Ln -> L1 -> Ln-1 -> L2 -> Ln-2 …
 
-Solution :  [Rearrange Algorithm](https://gist.github.com/anubhavbagri/b450b4c3ba12927dd56e3133c31c2aa7/f690d90f6f8d4177e05f6dac7c300c5d3176a89b)
+Solution :  [Rearrange Algorithm](https://gist.github.com/anubhavbagri/b450b4c3ba12927dd56e3133c31c2aa7)
+
+**Q6.** Write an algorithm to reverse last 5 nodes of linked list. Please let me know if there is any better way.
+For example -
+```
+Input: 1,2,3,4,5,6,7
+```
+```
+Output: 1,2,7,6,5,4,3
+```
+
+Solution : [Reverse last 5 nodes](https://gist.github.com/anubhavbagri/7e1b1719b3a0691c9771f38a5756263e)
