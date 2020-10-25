@@ -93,3 +93,69 @@ void deleteFirst(node **start)
     *start = (*start)->next;
     free(temp);
 }
+
+void deleteLast(node **start)
+{
+    if (*start == NULL)
+    {
+        printf("\nNo node to delete.");
+        return;
+    }
+    node *ptr = *start;
+    if (ptr->next == NULL)
+    {
+        printf("\nDeleted Value : %d\n", ptr->data);
+        ptr = NULL;
+        *start = NULL;
+        free(ptr);
+        return;
+    }
+    node *last = *start;
+    node *second_last;
+    while (last->next != NULL)
+    {
+        second_last = last;
+        last = last->next;
+    }
+    printf("\nDeleted Value : %d\n", last->data);
+    second_last->next = NULL;
+    free(last);
+}
+
+void deletePos(node **start, int pos)
+{
+    if ((*start) == NULL)
+    {
+        printf("List is Empty.");
+        return;
+    }
+    node *temp = *start;
+    if (pos == 1)
+    {
+        printf("\nNode deleted.");
+        *start = temp->next;
+        free(temp);
+        return;
+    }
+    for (int i = 1; temp != NULL && i < pos - 1; i++)
+        temp = temp->next;
+    if (temp == NULL || temp->next == NULL)
+    {
+        printf("\nInvalid Position.");
+        return;
+    }
+    node *ptr = temp->next->next;
+    free(temp->next);
+    temp->next = ptr;
+}
+
+int main()
+{
+    node *start = NULL;
+    printf("\nOperations on Singly LinkedList - \n");
+    printf("\nPress 1 to insert Node at the beginning.");
+    printf("\nPress 2 to insert Node at the End.");
+    printf("\nPress 3 to insert Node at inputted position k.");
+    printf("\nPress 4 to delete Node from the beginning.");
+    printf("\nPress 5 to delete node from the end.");
+    printf("\nPress 6 to delete node from the inputted position k.");
