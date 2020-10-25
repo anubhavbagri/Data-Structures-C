@@ -44,7 +44,7 @@ Output :
  1 -> 2 -> 5 -> 7 -> 4 -> 8 -> NULL
  1 -> 2 -> 5 -> 8 -> 7 -> 4 -> NULL
 ```
-_Solution_ :  [MenuDrivenOperation.c]()
+_Solution_ :  [MenuDrivenOperation.c](MenuDrivenOperation.c)
 
 **Q2.(ii)** For a given singly linked list delete a node:
 * at the beginning
@@ -60,7 +60,7 @@ Output :
 1 -> 2 -> 5 -> 7 -> NULL
 1 -> 2 -> 7 -> 4 -> NULL
 ```
-_Solution_ :  [MenuDrivenOperation.c]()
+_Solution_ :  [MenuDrivenOperation.c](MenuDrivenOperation.c)
 
 **Q3.(i)** Print all the elements at the index of multiples of k with the first element assumed to have an index of 0. Do this for a single pass of the linked list.
 ```
