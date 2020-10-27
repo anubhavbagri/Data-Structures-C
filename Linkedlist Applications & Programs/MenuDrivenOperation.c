@@ -149,6 +149,22 @@ void deletePos(node **start, int pos)
     temp->next = ptr;
 }
 
+void display(node *start)
+{
+    if (start == NULL)
+    {
+        printf("List is Empty.");
+        return;
+    }
+    printf("\nList : [");
+    while (start)
+    {
+        printf("%d ", start->data);
+        start = start->next;
+    }
+    printf("]\n");
+}
+
 int main()
 {
     node *start = NULL;
@@ -159,3 +175,52 @@ int main()
     printf("\nPress 4 to delete Node from the beginning.");
     printf("\nPress 5 to delete node from the end.");
     printf("\nPress 6 to delete node from the inputted position k.");
+    printf("\nPress 7 to display the list.");
+    printf("\nPress 0 to exit.\n");
+    while (1)
+    {
+        int ch, d, pos, x;
+        printf("\nEnter your choice : ");
+        scanf("%d", &ch);
+        switch (ch)
+        {
+        case 0:
+            exit(ch); //return
+        case 1:
+            printf("\nEnter data to be inserted at the beginning: ");
+            scanf("%d", &d);
+            insertAtFront(&start, d);
+            break;
+        case 2:
+            printf("\nEnter data to be inserted at the end: ");
+            scanf("%d", &d);
+            insertAtEnd(&start, d);
+            break;
+        case 3:
+            printf("\nEnter data to be inserted : ");
+            scanf("%d", &d);
+            printf("\nEnter position number where %d has to be inserted : ", d);
+            scanf("%d", &pos);
+            insertPos(&start, d, pos);
+            display(start);
+            break;
+        case 4:
+            deleteFirst(&start);
+            break;
+        case 5:
+            deleteLast(&start);
+            break;
+        case 6:
+            printf("\nEnter position number from where node has to be deleted : ");
+            scanf("%d", &pos);
+            deletePos(&start, pos);
+            display(start);
+            break;
+        case 7:
+            display(start);
+            break;
+        default:
+            printf("Invalid Choice.");
+        }
+    }
+}
