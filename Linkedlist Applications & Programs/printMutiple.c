@@ -8,23 +8,13 @@ struct Node
 };
 typedef struct Node node;
 
-void MoveNode(node **endRef, node **startRef)
-{
-    node *newNode = *startRef;
-    if(newNode == NULL)
-        return;
-    *startRef = newNode->next;
-    newNode->next = *endRef;
-    *endRef = newNode;
-}
-
 void insertAtEnd(node **start, int d)
 {
     /* 1. allocate new node. */
     node *newNode = (node *)malloc(sizeof(node));
     /* 2. put the data into newNode. */
     newNode->data = d;
-    /* 3. this new node is going to be the last node, so make the next null. */
+    /* 3. this new node is going to be the last node, so make the next null.*/
     newNode->next = NULL;
     /* 4. if the linked list is empty, then make the newNode as start. */
     if (*start == NULL)
@@ -42,50 +32,29 @@ void insertAtEnd(node **start, int d)
     last->next = newNode;
 }
 
-void alternateSplit(node *start, node **aRef, node **bRef)
+void print_multiple(node *start, int k)
 {
-    node a;
-    node *aEnd = &a;
-    node b;
-    node *bEnd = &b;
-    node *current = start;
-    a.next = NULL;
-    b.next = NULL;
-    while(current != NULL)
-    {
-        MoveNode(&(aEnd->next), &current);
-        aEnd = aEnd->next;
-        if (current != NULL)
-        {
-            MoveNode(&(bEnd->next), &current);
-            bEnd = bEnd->next;
-        }
-    }
-    *aRef = a.next;
-    *bRef = b.next;
-}
-
-void display(node *start)
-{
-    if(start==NULL)
+    if (start == NULL)
     {
         printf("List is Empty.");
         return;
     }
-    printf("\nList : [");
-    while(start)
+    int i = 0;
+    node *ptr = start;
+    while (ptr != NULL)
     {
-        printf("%d ", start->data);
-        start=start->next;
+        if (i % k == 0)
+            printf("%d ", ptr->data);
+        i++;
+        ptr = ptr->next;
     }
-    printf("]\n");
 }
 
 int main()
 {
-    node *start = NULL, *a = NULL, *b = NULL;
+    node *start = NULL;
     printf("\nPress 1 to insert Node (at the End).");
-    printf("\nPress 2 to divide list into alternate elements and display.");
+    printf("\nPress 2 to print all elements at index of multiples of k.");
     printf("\nPress 0 to exit.\n");
     while (1)
     {
@@ -102,14 +71,14 @@ int main()
             insertAtEnd(&start, d);
             break;
         case 2:
-            alternateSplit(start,&a,&b);
-            printf("\nFirst List - \n");
-            display(a);
-            printf("\nSecond List - \n");
-            display(b);
+            printf("\nEnter the value of k : ");
+            scanf("%d", &x);
+            printf("\n");
+            print_multiple(start, x);
             break;
         default:
             printf("Invalid Choice.");
+            return;
         }
     }
 }

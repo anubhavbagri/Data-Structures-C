@@ -87,7 +87,7 @@ int main()
     printf("\nPress 0 to exit.\n");
     while (1)
     {
-        int ch, d, pos, x;
+        int ch, d, x;
         printf("\nEnter your choice : ");
         scanf("%d", &ch);
         switch (ch)
