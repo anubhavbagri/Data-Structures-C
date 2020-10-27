@@ -70,7 +70,7 @@ Input : k=3
 ```
 Output : 12 -> 17 -> 22 -> NULL
 ```
-_Solution_ :  [printMultiple.c]()
+_Solution_ :  [printMultiple.c](printMutiple.c)
 
 **Q3.(ii)** Extend the above solution assuming that the list is circular and the N-th index is the same as 0-th index. You may need multiple passes. However, every number should be printed only once during its first selection.
 ```
