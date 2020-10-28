@@ -80,7 +80,7 @@ Input : k=3
 ```
 Output : 12 -> 17 -> 22 -> 18 -> 20 -> 15 -> 19 -> NULL
 ```
-_Solution_ :  [circularMultiple.c]()
+_Solution_ :  [circularMultiple.c](circularMultiple.c)
 
 **Q4.(i)** Remove in a linked list all the nodes that have a greater value to their right.
 ```
