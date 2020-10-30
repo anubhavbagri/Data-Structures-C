@@ -112,3 +112,41 @@ void display(node *start)
     }
     printf("]\n");
 }
+
+int main()
+{
+    node *start = NULL;
+    printf("\nPress 1 to insert Node (at the End).");
+    printf("\nPress 2 to remove all nodes that have greater value to their right.");
+    printf("\nPress 3 to perform pair-wise swap of nodes of the list.");
+    printf("\nPress 4 to display the list.");
+    printf("\nPress 0 to exit.\n");
+    while (1)
+    {
+        int ch, d, x;
+        printf("\nEnter your choice : ");
+        scanf("%d", &ch);
+        switch (ch)
+        {
+        case 0:
+            exit(ch); //return
+        case 1:
+            printf("\nEnter data to be inserted : ");
+            scanf("%d", &d);
+            insertAtEnd(&start, d);
+            break;
+        case 2:
+            remove_greater(&start);
+            break;
+        case 3:
+            pairWiseSwap(&start);
+            break;
+        case 4:
+            display(start);
+            break;
+        default:
+            printf("Invalid Choice.");
+            return;
+        }
+    }
+}
