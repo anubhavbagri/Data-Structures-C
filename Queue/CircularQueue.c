@@ -61,30 +61,75 @@ void dequeueCircularQueue(Q *queue)
 
 void displayCircularQueue(Q *queue)
 {
-    if(isEmpty(queue))
+    if (isEmpty(queue))
     {
         printf("\nQueue is empty!");
         return;
     }
     int i;
     printf("\nQueue : ");
-    if(queue->front <= (queue->rear % queue->size))
+    if (queue->front <= (queue->rear % queue->size))
     {
-        for(i = queue->front; i <= (queue->rear % queue->size); i++)
+        for (i = queue->front; i <= (queue->rear % queue->size); i++)
         {
             printf("--->%d", queue->buffer[i]);
         }
     }
     else
     {
-        for(i = queue->front; i < queue->size; i++)
+        for (i = queue->front; i < queue->size; i++)
         {
             printf("--->%d", queue->buffer[i]);
         }
-        for(i = 0; i <= (queue->rear % queue->size); i++)
+        for (i = 0; i <= (queue->rear % queue->size); i++)
         {
             printf("--->%d", queue->buffer[i]);
         }
     }
     printf("\n");
+}
+
+int main()
+{
+    int size, ch, data;
+    Q q;
+    printf("\nEnter the size of queue : ");
+    scanf("%d", &size);
+    q = createQ(size);
+    printf("\n1. Enqueue Circular queue.");
+    printf("\n2. Dequeue Circular queue.");
+    printf("\n3. Display Circular Queue.");
+    printf("\n0. Exit.\n");
+    while (1)
+    {
+        printf("\nEnter your choice (0-3) : ");
+        scanf("%d", &ch);
+        switch (ch)
+        {
+        case 1:
+        {
+            printf("\nEnter data to insert into queue : ");
+            scanf("%d", &data);
+            enqueueCircularQueue(&q, data);
+            break;
+        }
+        case 2:
+        {
+            dequeueCircularQueue(&q);
+            break;
+        }
+        case 3:
+        {
+            displayCircularQueue(&q);
+            break;
+        }
+        case 0:
+        {
+            exit(ch);
+        }
+        default:
+            printf("\nWrong option selected.");
+        }
+    }
+    return 0;
 }
