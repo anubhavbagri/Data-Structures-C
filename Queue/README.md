@@ -28,6 +28,21 @@ Few more functions are required to make the above-mentioned queue operation effi
 
 ## Types of Queue
 
-* [**Linear Queue**](#linear-queue)
+* [**Linear Queue**](#Basic-Operations-of-Queue)
 * [**Circular Queue**](#circular-queue)
 * [**Priority Queue**](#priority-Queue)
+
+### Limitation of Queue
+
+As you can see in the image below, after a bit of enqueuing and dequeuing, the size of the queue has been reduced.
+
+![limitation-queue](limitation.png)
+
+The indexes 0 and 1 can only be used after the queue is reset when all the elements have been dequeued.
+
+After `REAR` reaches the last index, if we can store extra elements in the empty spaces (0 and 1), we can make use of the empty spaces. This is implemented by a modified queue called the [circular queue](#circular-queue).
+
+## Circular Queue
+
+
+
