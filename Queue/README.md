@@ -26,6 +26,10 @@ Few more functions are required to make the above-mentioned queue operation effi
 
 `isempty()` − Checks if the queue is empty.
 
+## Complexity Analysis
+
+The complexity of enqueue and dequeue operations in a queue using an array is `O(1)`
+
 ## Types of Queue
 
 * [**Linear Queue**](#Basic-Operations-of-Queue)
@@ -44,5 +48,10 @@ After `REAR` reaches the last index, if we can store extra elements in the empty
 
 ## Circular Queue
 
+Circular Queue works by the process of circular increment i.e. when we try to increment the pointer and we reach the end of the queue, we start from the beginning of the queue.
 
+Here, the circular increment is performed by modulo division with the queue size. That is,
 
+`if REAR + 1 == 5 (overflow!), REAR = (REAR + 1)%5 = 0 (start of queue)`
+
+![circular-queue](circularQueue.png)
