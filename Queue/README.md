@@ -55,3 +55,17 @@ Here, the circular increment is performed by modulo division with the queue size
 `if REAR + 1 == 5 (overflow!), REAR = (REAR + 1)%5 = 0 (start of queue)`
 
 ![circular-queue](img/circularQueue.png)
+
+## Priority Queue
+
+A priority queue is a special type of queue in which each element is associated with a priority and is served according to its priority. If elements with the same priority occur, they are served according to their order in the queue.
+
+Generally, the value of the element itself is considered for assigning the priority.
+
+For example, The element with the highest value is considered as the highest priority element. However, in other cases, we can assume the element with the lowest value as the highest priority element. In other cases, we can set priorities according to our needs.
+
+![Priority-queue](img/PriorityQueue.png)
+
+### Difference between Priority Queue and Normal Queue
+
+In a queue, the first-in-first-out rule is implemented whereas, in a priority queue, the values are removed on the basis of priority. The element with the highest priority is removed first.
