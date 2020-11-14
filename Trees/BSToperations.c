@@ -34,3 +34,18 @@ struct Node * insertion(struct Node *root, int item){
         return root;   //requirement for compiler to avoid missing return statement.
     }
 }
+int main()
+{
+    struct Node *root = NULL;
+    int choice, item;
+    do{
+        printf("\nEnter the item which you want to insert : ");
+        scanf("%d", &item);
+        root = insertion(root, item);
+        printf("\nPress 1 to insert more tree and 0 to exit : ");
+        scanf("%d", &choice);
+    }while(choice);
+    printf("\n Displaying the tree : ");
+    inorder(root);
+	return 0;
+}
