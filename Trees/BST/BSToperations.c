@@ -34,6 +34,14 @@ struct Node * insertion(struct Node *root, int item){
         return root;   //requirement for compiler to avoid missing return statement.
     }
 }
+struct Node* search(struct Node* root, int item)
+{
+    if (root == NULL || root->data == item)
+        return root;
+    if (root->data < item)
+        return search(root->right, item);
+    return search(root->left, item);
+}
 int main()
 {
     struct Node *root = NULL;
