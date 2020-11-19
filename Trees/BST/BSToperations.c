@@ -42,6 +42,55 @@ struct Node* search(struct Node* root, int item)
         return search(root->right, item);
     return search(root->left, item);
 }
+struct Node *findInorderSuccessor(struct Node *node )
+{
+    struct Node *current = node;
+    //Find the leftmost leaf
+    while(current && current->left != NULL)
+    {
+        current = current->left;
+    }
+
+    return current;
+}
+struct Node * deleteNode(struct Node *root, int key)
+{
+    if(root == NULL)
+    {
+        return root;
+    }
+    if(key < root->data)
+    {
+        root->left = deleteNode(root->left, key);
+    }
+    else if(key > root->data)
+    {
+        root->right = deleteNode(root->right, key);
+    }
+    else
+    {
+        //if the node is with one child or no child
+        if(root->left == NULL)
+        {
+            struct Node *temp = root->right;
+            free(root);
+            return temp;
+        }
+        else if(root->right == NULL)
+        {
+            struct Node *temp = root->left;
+            free(root);
+            return temp;
+        }
+        //If the node has two children
+        struct Node *temp = findInorderSuccessor(root->right);
+        //place the in-order successor in position of the node to be deleted
+        root->data = temp->data;
+        //Delete the in-order successor.
+        root->right = deleteNode(root->right, temp->data);
+    }
+    return root;
+}
 int main()
 {
     struct Node *root = NULL;
