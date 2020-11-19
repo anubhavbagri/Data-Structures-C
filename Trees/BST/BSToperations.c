@@ -37,15 +37,57 @@ struct Node * insertion(struct Node *root, int item){
 int main()
 {
     struct Node *root = NULL;
-    int choice, item;
-    do{
-        printf("\nEnter the item which you want to insert : ");
-        scanf("%d", &item);
-        root = insertion(root, item);
-        printf("\nPress 1 to insert more tree and 0 to exit : ");
+    int choice, item, se;
+    do
+    {
+        printf("\nBST Operations");
+        printf("\nPress 1 to insert.");
+        printf("\nPress 2 to search.");
+        printf("\nPress 3 to delete.");
+        printf("\nPress 4 to display.");
+        printf("\nPress 0 to exit");
+        printf("\nEnter your choice (0, 1, 2, 3, 4) : ");
         scanf("%d", &choice);
-    }while(choice);
-    printf("\n Displaying the tree : ");
-    inorder(root);
-	return 0;
+        switch(choice)
+        {
+        case 1:
+        {
+            printf("\nEnter the item which you want to insert : ");
+            scanf("%d", &item);
+            root = insertion(root, item);
+            break;
+        }
+        case 2:
+        {
+            printf("\nEnter the value which you want to search : ");
+            scanf("%d", &se);
+            if(search(root, se))
+                printf("\nElement %d found.",se);
+            else
+                printf("\nElement %d not found.",se);
+        }
+        case 3:
+        {
+            printf("\nEnter the item which you want to delete : ");
+            scanf("%d", &item);
+            root = deleteNode(root, item);
+            break;
+        }
+        case 4:
+        {
+            inorder(root);
+            break;
+        }
+        case 0:
+        {
+            exit(choice);
+        }
+        default:
+        {
+            printf("\nWrong option selected.");
+        }
+        }
+    }
+    while(1);
+    return 0;
 }
