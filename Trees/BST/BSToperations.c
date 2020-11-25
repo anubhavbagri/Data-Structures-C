@@ -1,37 +1,56 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-struct Node{
+struct Node
+{
     int data;
     struct Node *left;
     struct Node *right;
 };
-struct Node * create(int item){
+struct Node * create(int item)
+{
     struct Node * node = (struct Node*) malloc(sizeof(struct Node*));
     node->data = item;
     node->left = node->right = NULL;
     return node;
 }
-void inorder(struct Node *root){
-    if(root == NULL){
+void preorder(struct Node *root)
+{
+    if(root == NULL)
+    {
+        return;
+    }
+    printf("-->%d ", root->data);
+    preorder(root->left);
+    preorder(root->right);
+}
+void inorder(struct Node *root)
+{
+    if(root == NULL)
+    {
         return;
     }
     inorder(root->left);
-    printf(" %d ", root->data);
+    printf("-->%d ", root->data);
     inorder(root->right);
 }
-struct Node * insertion(struct Node *root, int item){
-    if(root == NULL){
+struct Node * insertion(struct Node *root, int item)
+{
+    if(root == NULL)
+    {
         return create(item);
     }
-    if(item < root->data){
+    if(item < root->data)
+    {
         root->left = insertion(root->left, item);
     }
-    else if (item > root->data){
+    else if (item > root->data)
+    {
         root->right = insertion(root->right, item);
     }
-    else{
-        return root;   //requirement for compiler to avoid missing return statement.
+    else
+    {
+        return root;     //requirement for compiler to avoid missing return statement.
     }
 }
 struct Node* search(struct Node* root, int item)
@@ -42,6 +61,7 @@ struct Node* search(struct Node* root, int item)
         return search(root->right, item);
     return search(root->left, item);
 }
+//find the in-order successor
 struct Node *findInorderSuccessor(struct Node *node )
 {
     struct Node *current = node;
@@ -101,7 +121,8 @@ int main()
         printf("\nPress 1 to insert.");
         printf("\nPress 2 to search.");
         printf("\nPress 3 to delete.");
-        printf("\nPress 4 to display.");
+        printf("\nPress 4 to Preorder traversal.");
+        printf("\nPress 5 to In-order traversal.");
         printf("\nPress 0 to exit");
         printf("\nEnter your choice (0, 1, 2, 3, 4) : ");
         scanf("%d", &choice);
@@ -131,6 +152,11 @@ int main()
             break;
         }
         case 4:
+        {
+            preorder(root);
+            break;
+        }
+        case 5:
         {
             inorder(root);
             break;
