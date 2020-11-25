@@ -121,6 +121,14 @@ struct Node * deleteNode(struct Node *root, int key)
     }
     return root;
 }
+int countNumOfNodes(struct Node *root)
+{
+    if(root == NULL)
+    {
+        return 0;
+    }
+    return 1 + countNumOfNodes(root->left) + countNumOfNodes(root->right);
+}
 int main()
 {
     struct Node *root = NULL;
