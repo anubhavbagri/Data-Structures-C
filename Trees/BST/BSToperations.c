@@ -132,7 +132,7 @@ int countNumOfNodes(struct Node *root)
 int main()
 {
     struct Node *root = NULL;
-    int choice, item, se;
+    int choice, item, se, nodeCount;
     do
     {
         printf("\nBST Operations");
@@ -142,8 +142,9 @@ int main()
         printf("\nPress 4 to Preorder traversal.");
         printf("\nPress 5 to In-order traversal.");
         printf("\nPress 6 to Postorder traversal.");
+        printf("\nPress 7 to print total number of nodes.");
         printf("\nPress 0 to exit");
-        printf("\nEnter your choice (0, 1, 2, 3, 4) : ");
+        printf("\nEnter your choice (0, 1, 2, 3, 4, 5, 6, 7) : ");
         scanf("%d", &choice);
         switch(choice)
         {
@@ -183,6 +184,12 @@ int main()
         case 6:
         {
             postorder(root);
+            break;
+        }
+        case 7:
+        {
+            nodeCount = countNumOfNodes(root);
+            printf("Total number of nodes in the tree = %d", nodeCount);
             break;
         }
         case 0:
