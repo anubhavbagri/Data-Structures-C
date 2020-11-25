@@ -34,6 +34,16 @@ void inorder(struct Node *root)
     printf("-->%d ", root->data);
     inorder(root->right);
 }
+void postorder(struct Node *root)
+{
+    if(root == NULL)
+    {
+        return;
+    }
+    postorder(root->left);
+    postorder(root->right);
+    printf("-->%d ",root->data);
+}
 struct Node * insertion(struct Node *root, int item)
 {
     if(root == NULL)
@@ -123,6 +133,7 @@ int main()
         printf("\nPress 3 to delete.");
         printf("\nPress 4 to Preorder traversal.");
         printf("\nPress 5 to In-order traversal.");
+        printf("\nPress 6 to Postorder traversal.");
         printf("\nPress 0 to exit");
         printf("\nEnter your choice (0, 1, 2, 3, 4) : ");
         scanf("%d", &choice);
@@ -159,6 +170,11 @@ int main()
         case 5:
         {
             inorder(root);
+            break;
+        }
+        case 6:
+        {
+            postorder(root);
             break;
         }
         case 0:
